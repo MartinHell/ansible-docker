@@ -27,6 +27,7 @@ RUN echo "===> Adding gnupg2..." && \
     apt-get install -y unzip && \
     wget https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip && \
     unzip packer_1.4.1_linux_amd64.zip && \
+    rm -f packer_1.4.1_linux_amd64.zip && \
     mv packer /usr/local/bin/ && \
     \
     echo "===> Install packer-builder-vsphere" && \
