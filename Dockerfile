@@ -24,7 +24,7 @@ RUN echo "===> Adding gnupg2..." && \
     \
     \
     echo "===> Installing Packer..." && \
-    apt-get install -y unzip && \
+    apt-get install -y unzip wget && \
     wget https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip && \
     unzip packer_1.4.1_linux_amd64.zip && \
     rm -f packer_1.4.1_linux_amd64.zip && \
