@@ -23,6 +23,17 @@ RUN echo "===> Adding gnupg2..." && \
     apt-get install -y ansible  && \
     \
     \
+    echo "===> Installing Packer..." && \
+    apt-get install -y unzip && \
+    wget https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip && \
+    unzip packer_1.4.1_linux_amd64.zip && \
+    mv packer /usr/local/bin/ && \
+    \
+    echo "===> Install packer-builder-vsphere" && \
+    wget https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v2.3/packer-builder-vsphere-iso.linux && \
+    chmod +x packer-builder-vsphere-iso.linux && \
+    mv packer-builder-vsphere-iso.linux /usr/local/bin/ && \
+    \    
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
     pip install --upgrade pywinrm              && \
