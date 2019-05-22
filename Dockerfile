@@ -15,7 +15,7 @@ RUN echo "===> Adding gnupg2..." && \
     apt-get update && \
     apt-get install -y gnupg2 software-properties-common && \
     echo "===> Adding Ansible's PPA..."  && \
-    add-apt-repository ppa:ansible/ansible    && \
+    add-apt-repository ppa:ansible/ansible-2.8    && \
     DEBIAN_FRONTEND=noninteractive  apt-get update  && \
     \
     \
