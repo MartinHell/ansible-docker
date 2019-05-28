@@ -35,6 +35,8 @@ RUN echo "===> Adding gnupg2..." && \
     chmod +x packer-builder-vsphere-iso.linux && \
     mv packer-builder-vsphere-iso.linux /usr/local/bin/ && \
     \    
+    echo "===> Installing genisoimage..." && \
+    apt-get install -y genisoimage && \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
     pip install --upgrade pywinrm pyvmomi             && \
