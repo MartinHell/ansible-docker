@@ -23,13 +23,9 @@ RUN echo "===> Adding gnupg2..." && \
     apt-get install -y ansible  && \
     \
     \
-    echo "===> Installing needed tools..."  && \
-    pip install --upgrade pyvmomi              && \
-    \
-    \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
-    pip install --upgrade pywinrm              && \
+    pip install --upgrade pywinrm pyvmomi      && \
     apt-get install -y sshpass openssh-client  && \
     apt-get install -y python-netaddr && \
     \
