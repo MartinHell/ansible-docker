@@ -28,6 +28,7 @@ RUN echo "===> Adding gnupg2..." && \
     pip install --upgrade pywinrm pyvmomi      && \
     apt-get install -y sshpass openssh-client  && \
     apt-get install -y python-netaddr && \
+    apt-get install -y git && \
     \
     \
     echo "===> Removing Ansible PPA..."  && \
