@@ -25,7 +25,7 @@ RUN echo "===> Adding gnupg2..." && \
     \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
-    pip install --upgrade pywinrm pyvmomi pynetbox && \
+    pip install --upgrade pywinrm pyvmomi pynetbox jmespath && \
     apt-get install -y sshpass openssh-client  && \
     apt-get install -y python-netaddr && \
     \
