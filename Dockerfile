@@ -39,7 +39,7 @@ RUN echo "===> Adding gnupg2..." && \
     apt-get install -y genisoimage && \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
-    pip install --upgrade pywinrm pyvmomi             && \
+    pip install --upgrade pywinrm pyvmomi jmespath && \
     apt-get install -y sshpass openssh-client  && \
     apt-get install -y python-netaddr && \
     \
