@@ -25,7 +25,7 @@ RUN echo "===> Adding gnupg2..." && \
     \
     echo "===> Installing Packer..." && \
     apt-get install -y unzip wget && \
-    wget https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip && \
+    wget https://releases.hashicorp.com/packer/1.4.2/packer_1.4.2_linux_amd64.zip && \
     unzip packer_1.4.1_linux_amd64.zip && \
     rm -f packer_1.4.1_linux_amd64.zip && \
     mv packer /usr/local/bin/ && \
@@ -35,8 +35,8 @@ RUN echo "===> Adding gnupg2..." && \
     chmod +x packer-builder-vsphere-iso.linux && \
     mv packer-builder-vsphere-iso.linux /usr/local/bin/ && \
     \    
-    echo "===> Installing genisoimage..." && \
-    apt-get install -y genisoimage && \
+    echo "===> Installing ISO remastering tools..." && \
+    apt-get install -y p7zip-full cpio gzip genisoimage whois pwgen wget fakeroot isolinux xorriso && \
     echo "===> Installing handy tools (not absolutely required)..."  && \
     apt-get install -y python-pip              && \
     pip install --upgrade pywinrm pyvmomi jmespath && \
